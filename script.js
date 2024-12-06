@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", load());
+document.addEventListener("DOMContentLoaded", load);
 
 function load() {
 
@@ -37,7 +37,7 @@ function load() {
     let loader = document.getElementsByClassName("loader")[0];
     loader.style.display = "block";
     let data = { apikey: "1b7ff984", t: search };
-    let result = await sendRequest("http://www.omdbapi.com/", "GET", data);
+    let result = await sendRequest("https://www.omdbapi.com/", "GET", data);
     loader.style.display = "none";
 
     if (result.Response == "False") {
@@ -86,7 +86,7 @@ function load() {
     const search = document.getElementsByName("search")[0].value;
     const similarMovieTitle = document.getElementsByClassName("movieTitle")[1];
     const data = { apikey: "1b7ff984", s: search };
-    const result = await sendRequest("http://www.omdbapi.com/", "GET", data);
+    const result = await sendRequest("https://www.omdbapi.com/", "GET", data);
 
     if (result.Response == "False") {
     } else {
